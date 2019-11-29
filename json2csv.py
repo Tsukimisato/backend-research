@@ -16,7 +16,7 @@ def upload_file():
     # print(file['data'])
     # file.to_csv(file['id'] + '.csv', encoding = 'utf-8')
     with open('./data/'+ file['id'] + '.csv', 'w', newline = '') as f:
-        writer = csv.DictWriter(f, ['datetime', 'dword'])
+        writer = csv.DictWriter(f, ['datetime', 'dwords'])
         writer.writeheader()
         writer.writerows(file['data'])
         return file
